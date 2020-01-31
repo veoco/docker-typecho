@@ -18,7 +18,7 @@ RUN apk update \
 && rm -rf build/ 
 
 COPY src/config.inc.php /data/www/
-COPY src/5e33b214540c0.db /data/www/usr/
+COPY src/5e33c49f955f8.db /data/www/usr/
 
 RUN chown -R caddy:caddy /data/www
 
