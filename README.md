@@ -16,3 +16,6 @@ Default account is **admin/admin**.
 docker pull veoco/typecho:latest
 docker run -d --name=blog -p 80:80 veoco/typecho
 ```
+
+## Thanks
+[ylqjgm](https://github.com/ylqjgm/Alpine)
