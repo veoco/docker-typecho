@@ -11,9 +11,9 @@ RUN apk update \
 && mkdir -p /data/www \
 && rm -f /etc/init.d/caddy\
 && rm -f /etc/init.d/php-fpm7\
-&& wget http://typecho.org/downloads/1.1-17.10.30-release.tar.gz \
-&& tar zxf 1.1-17.10.30-release.tar.gz \
-&& rm -f 1.1-17.10.30-release.tar.gz \
+&& wget http://typecho.org/build.tar.gz \
+&& tar zxf build.tar.gz \
+&& rm -f build.tar.gz \
 && mv build/* /data/www/ \
 && rm -rf build/ 
 
