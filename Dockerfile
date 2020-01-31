@@ -15,8 +15,12 @@ RUN apk update \
 && tar zxf 1.1-17.10.30-release.tar.gz \
 && rm -f 1.1-17.10.30-release.tar.gz \
 && mv build/* /data/www/ \
-&& rm -rf build/ \
-&& chown -R caddy:caddy /data/www
+&& rm -rf build/ 
+
+COPY src/config.inc.php /data/www/
+COPY src/5e33b214540c0.db /data/www/usr/
+
+RUN chown -R caddy:caddy /data/www
 
 COPY ["src/caddy.conf", "src/php-fpm.conf", "src/supervisord.conf", "/etc/conf/"]
 
