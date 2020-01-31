@@ -4,7 +4,7 @@ LABEL maintainer="veoco <one@nomox.cn>"
 
 RUN apk update \
 && apk add caddy supervisor php7 \
-&& apk add php7-xml php7-fpm php7-opcache php7-ctype php7-pdo_sqlite php7-session php7-curl php7-tokenizer php7-mbstring \
+&& apk add php7-xml php7-fpm php7-ctype php7-pdo_sqlite php7-session php7-curl php7-mbstring \
 && mkdir -p /etc/conf \
 && mkdir -p /data/run \
 && mkdir -p /data/log \
